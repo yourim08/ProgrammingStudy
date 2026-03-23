@@ -9,7 +9,8 @@ let count = 0;
 
 // HTML -> JS
 const resultH1 = document.getElementsByTagName("h1")[0];
-const plusButton = document.getElementsByTagName("button")[0];
+
+// const plusButton = document.getElementsByTagName("button")[0];
 
 // button 누르면 숫자 증가하자
 // plusButton.addEventListener("click",  () => {
@@ -18,7 +19,14 @@ const plusButton = document.getElementsByTagName("button")[0];
 // });
 
 // onClick 속성
-plusButton.onClick = () => {
-    count++;
+// plusButton.onClick = () => {
+//     count++;
+//     resultH1.innerHTML = count;
+// };
+
+
+// html태그에 자체 onclick 속성 주기
+function plus () {
+    count++
     resultH1.innerHTML = count;
-};
+}
