@@ -8,7 +8,7 @@
 let count = 0;
 
 // HTML -> JS
-const resultH1 = document.getElementsById("result");
+const resultH1 = document.getElementById("result");
 // const resultH1 = document.querySelector("#result");
 // const plusButton = document.getElementsByTagName("button")[0];
 
@@ -26,7 +26,12 @@ const resultH1 = document.getElementsById("result");
 
 
 // html태그에 자체 onclick 속성 주기
-function plus () {
-    count++
+function plus (number = 1) {
+    count += number;
     resultH1.innerHTML = count;
 }
+
+// const plus = (number = 1) => {
+//     count += number;
+//     resultH1.innerHTML = count;
+// };
