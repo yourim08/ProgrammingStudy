@@ -1,10 +1,3 @@
-// function countPlus(){  
-//     let number = document.getElementById("number");
-//     let count = Number(number.textContent) + 1;
-//     number.textContent = count;
-// }
-
-
 let count = 0;
 
 // HTML -> JS
@@ -35,3 +28,6 @@ function plus (number = 1) {
 //     count += number;
 //     resultH1.innerHTML = count;
 // };
+
+// js에만 0 변수 두기
+resultH1.innerHTML = count;
