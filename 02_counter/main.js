@@ -8,8 +8,8 @@
 let count = 0;
 
 // HTML -> JS
-const resultH1 = document.getElementsByTagName("h1")[0];
-
+const resultH1 = document.getElementsById("result");
+// const resultH1 = document.querySelector("#result");
 // const plusButton = document.getElementsByTagName("button")[0];
 
 // button 누르면 숫자 증가하자
