@@ -12,7 +12,13 @@ const resultH1 = document.getElementsByTagName("h1")[0];
 const plusButton = document.getElementsByTagName("button")[0];
 
 // button 누르면 숫자 증가하자
-plusButton.addEventListener("click",  () => {
+// plusButton.addEventListener("click",  () => {
+//     count++;
+//     resultH1.innerHTML = count;
+// });
+
+// onClick 속성
+plusButton.onClick = () => {
     count++;
     resultH1.innerHTML = count;
-});
+};
