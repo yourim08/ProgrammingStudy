@@ -6,3 +6,5 @@ vanila HTML, CSS, JavaScript로 만든 Counter
 ```shell
 npm create vite@latest .
 ```
+
+### CounterApp
