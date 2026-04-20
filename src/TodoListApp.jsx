@@ -9,7 +9,7 @@ import TodoAdder from './components/TodoAdder.jsx';
 import TodoList from './components/TodoList.jsx';
 
 class Todo {
-  constructor(text, isCompleted){
+  constructor(text, isCompleted) {
     this.id = Date.now();             // 할 일 고유 id
     this.text = text;         // 할 일 내용
     this.isCompleted = false; // 완료 여부: 기본값 false
@@ -17,7 +17,7 @@ class Todo {
 }
 
 function TodoListApp() {
-  const[todos, setTodos] = useState([]); // 할 일 목록: 기본값 빈 리스트
+  const [todos, setTodos] = useState([]); // 할 일 목록: 기본값 빈 리스트
   const addTodo = (text) => setTodos((todos) => [
     // 이전 todos 복사하자
     ...todos,
@@ -28,11 +28,21 @@ function TodoListApp() {
   ]);
   // [...todos, new Todo(text)]
 
+  const toggleTodo = (id) => {
+    setTodos(
+      // todos에서 id에 해당하는 todo 찾고, 그 todo의 isCompleted를 토글화
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
+      )
+    )
+  }
+
+
   return (
     <div className="todo">
       <TodoHeader />
-      <TodoAdder addTodo={addTodo}/>
-      <TodoList todos={todos}/>    
+      <TodoAdder addTodo={addTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} />
     </div>
   )
 }
